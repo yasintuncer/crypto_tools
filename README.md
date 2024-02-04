@@ -10,11 +10,6 @@ This tool aims to easy apply encrypt and decrypt the data using the AES algorith
     cd repository
     pip install -e .
     ```
- 2. pypi installation:
-    ```
-    pip install decrypt-encrypt-tools
-    ```
-
 ## node installation
  1. for local installation, clone the repository and run the following command:
 
@@ -22,9 +17,3 @@ This tool aims to easy apply encrypt and decrypt the data using the AES algorith
     cd repository
     npm install
     ```
-2. npm installation:
-     ```
-    npm install decrypt-encrypt-tools
-    ```
-
-## U
