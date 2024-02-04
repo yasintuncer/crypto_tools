@@ -1,0 +1,23 @@
+{
+    "name": "@yasintuncer/crypto_tools",
+    "version": "1.0.0",
+    "description": "AES encryption and decryption",
+     "main": "src/crypto_tools.js",
+     "dependencies": {
+        "enum": "^3.0.4"
+     },
+     "repository": {
+        "type": "git",
+        "url": "https://github.com/yasintuncer/de-encrypt.git"
+     },
+     "scripts": {
+        "test": "node test/test.js"
+      },
+
+     "author": "Yasin Tuncer",
+     "license": "MIT",
+     "keywords": [
+        "AES",
+        "encryption",
+        "decryption"]       
+}
