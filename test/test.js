@@ -32,23 +32,17 @@ function main() {
     const key = keys["256-bit"];
     const aesCBC = new AESCipher(key, Mode.CBC);
 
-    const files = fs.readdirSync(test_file_dir)
+    const file = "../assets/test.jpg"
 
-    for (i = 0; i < files.length; i++) {
-        const data = fs.readFileSync(test_file_dir + "/" + files[i]);
-        if (encrypt_test(aesCBC, data)) {
-            const enc_buffer = aesCBC.encrypt(data);
-            const enc_output_name = "enc" + "with_js" + ".bin";
+    // read file
+    const data = fs.readFileSync(file);
 
-            fs.writeFileSync(enc_output_name, enc_buffer);
+    encrypted_data = aesCBC.encrypt(data);
+    fs.writeFileSync("enc_with_js.bin", encrypted_data);
 
-            const dec_buffer = aesCBC.decrypt(enc_buffer);
-            const dec_output_name = "dec" + "with_js" + ".png";
-
-            fs.writeFileSync(dec_output_name, dec_buffer);
-        }
-
-    }
+    decrypted_data = aesCBC.decrypt(encrypted_data);
+    fs.writeFileSync("dec_with_js.jpg", decrypted_data);
+    
 }
 
 
